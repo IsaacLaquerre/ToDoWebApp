@@ -1,0 +1,64 @@
+#tasks,
+#completedTasks {
+  position: relative;
+  list-style-type: none;
+  padding-inline-start: 0;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 90%;
+  height: 100%;
+  min-height: fit-content;
+}
+
+li.task {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10px;
+  width: 100%;
+  border-radius: 25px;
+  height: inherit;
+  transition: 0.2s ease;
+}
+
+li.task:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+input[type='text'].task-title {
+  background-color: var(--foreground-color);
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 5px;
+  width: 90%;
+  height: 25px;
+  color: var(--text-color);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 12pt;
+}
+
+input[type='text'].task-title:focus,
+input[type='text'].task-title:active {
+  outline: 1px solid var(--text-color);
+}
+
+span.task-title {
+  color: var(--text-color);
+  float: right;
+  font-size: 12pt;
+}
+
+li.task.checked span.task-title {
+  color: var(--text-color-crossed);
+  text-decoration: line-through;
+}
+
+span.task-title:focus,
+span.task-title:active {
+  color: var(--text-color);
+}
