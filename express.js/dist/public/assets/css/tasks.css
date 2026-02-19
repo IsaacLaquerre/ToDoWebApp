@@ -1,0 +1,100 @@
+#tasks,
+#completedTasks {
+  position: relative;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-inline-end: 0;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 90%;
+  height: 100%;
+  min-height: fit-content;
+}
+
+li.task {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10px;
+  padding: 5px;
+  transform: translateX(-5px);
+  width: 100%;
+  /*border-radius: 25px;*/
+  height: inherit;
+  transition: 0.2s ease;
+  z-index: 99;
+}
+
+/*li.task:not(#newTask):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}*/
+
+input[type='text'].task-title {
+  background-color: var(--foreground-color);
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 5px;
+  width: 90%;
+  height: 25px;
+  color: var(--text-color);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: 12pt;
+  font-family: 'Playwrite NZ Basic';
+}
+
+input[type='text'].task-title:focus,
+input[type='text'].task-title:active {
+  outline: 1px solid var(--text-color);
+}
+
+input[type='text'].task-title::placeholder {
+  font-size: 11pt;
+}
+
+span.task-title {
+  color: var(--text-color);
+  float: right;
+  font-size: 12pt;
+  padding-left: 3px;
+}
+
+li.task.checked span.task-title {
+  color: var(--text-color-crossed);
+  text-decoration: line-through;
+}
+
+span.task-title:focus,
+span.task-title:active {
+  color: var(--text-color);
+}
+
+span.task-delete {
+  font-style: normal;
+  position: absolute;
+  top: 55%;
+  right: 7.5px;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  opacity: 0;
+  user-select: none;
+  z-index: 102;
+  display: block;
+  text-align: center;
+  line-height: 10px;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+li.task:hover span.task-delete {
+  opacity: 100;
+}
+
+span.task-delete:hover {
+  color: rgb(200, 0, 0);
+}
