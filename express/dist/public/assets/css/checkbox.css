@@ -15,6 +15,7 @@ input[type='checkbox'].task-checkbox + span.checkmark {
   background-color: none;
   margin: auto 0 auto 0;
   transition: 0.1s ease;
+  cursor: pointer;
 }
 
 li.task:hover input[type='checkbox'].task-checkbox:not(:checked) + span.checkmark {

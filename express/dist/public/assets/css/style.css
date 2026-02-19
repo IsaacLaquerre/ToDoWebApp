@@ -25,12 +25,13 @@ body {
   height: 90%;
 }
 
-#app div:first-child {
+#app div {
   margin: auto;
   width: 500px;
 }
 
 div.container {
+  position: relative;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -55,4 +56,11 @@ hr {
   color: rgb(250, 250, 250, 0.33);
   border-radius: 5px;
   width: 95%;
+}
+
+#percentage {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 10pt;
 }

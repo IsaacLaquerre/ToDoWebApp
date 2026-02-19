@@ -11,7 +11,7 @@
   <!-- Icons -->
   <link rel="icon" href="../assets/images/favicon.ico" size="32x32" type="image/x-icon">
   <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png" type="image/png">
 
   <!-- CSS imports -->
   <link rel="stylesheet" href="../assets/css/font.css" type="text/css">
@@ -28,25 +28,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="onLoad();">
   <div id="app">
     <div class="container">
       <div style="display: flex; justify-content: center;">
-        <h1 class="title">To-do list</h1>
+        <h1 class="title">To-do</h1>
+        <span id="percentage">0/0 completed</span>
       </div>
       <hr />
       <ul id="tasks">
         <li id="newTask" class="task">
           <input type="checkbox" class="task-checkbox">
-          <span class="checkmark" onclick="check(this.parentNode);"></span>
-          <input type="text" class="task-title" onchange="updateTaskList();">
+          <span class="checkmark" onclick="check(this.parentNode);" title="Mark as completed" style="cursor: pointer;"></span>
+          <input type="text" class="task-title" onchange="updateTaskList();" onkeydown="if (event.key === 'Enter') updateTaskList();">
         </li>
       </ul>
       <hr />
+      <div style="display: flex; justify-content: center;">
+        <h1 class="title" style="font-size: 18pt;">Done</h1>
+      </div>
       <ul id="completedTasks">
         <div id="collapseTasks" onclick="collapse(this);"></div>
       </ul>
     </div>
   </div>
 </body>
+<script type="text/javascript">
+  function onLoad() {
+    load();
+  }
+</script>
 </html>
