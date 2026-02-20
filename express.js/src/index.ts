@@ -10,9 +10,9 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.port || 3000;
 const sendFileOptions = {
-  'root': './dist/public'
+  'root': '../public'
 };
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('../public'));
 
 // Index
 app.get('/', (req, res) => {
