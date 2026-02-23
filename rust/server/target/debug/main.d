@@ -1,1 +1,0 @@
-C:\Users\ilaquerre\Documents\GitHub\ToDoWebApp\rust\server\target\debug\main.exe: C:\Users\ilaquerre\Documents\GitHub\ToDoWebApp\rust\server\src\bin\main.rs C:\Users\ilaquerre\Documents\GitHub\ToDoWebApp\rust\server\src\lib.rs
